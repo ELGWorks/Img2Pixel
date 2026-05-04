@@ -1,0 +1,163 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: rem;
+}
+
+/* Nav Left Middle Container Styles */
+.top-left-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0.5rem;
+}
+
+.nav-logo{
+    height: 5rem;
+}
+
+.nav-brand {
+    font-family: Orbitron;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    display: inline;
+}
+
+/* Nav Middle Container Styles */
+.top-middle-container {
+    display: flex;
+    gap: 5rem;
+}
+
+a {
+    color: rgb(84 97 108);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+a:hover{
+    border-bottom-color: rgb(84 97 108);
+}
+
+/* Main Content Styles */
+
+.main-section,
+.demo-section,
+.about-section,
+.contact-us-section,
+.privacy-policy-section {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section {
+    height: calc(105dvh - 4rem);
+    scroll-margin-top: 4rem;
+}
+
+.main-container,
+.about-container,
+.contact-container,
+.privacy-policy-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-container {
+    gap: 1rem;
+}
+
+.slogan {
+    color: rgb(69 69 69);
+    font-weight: bold;
+    font-size: 3rem;
+
+    margin: 0;
+}
+
+.quick-how-to{
+    color: rgb(84 97 108);
+}
+
+.upload-button{
+  background:rgb(15 112 230);
+  color:#fff;
+  font-size: 1.5rem;
+  border-radius:2rem;
+  cursor:pointer;
+  transition: background-color 0.15s;
+  
+  padding:0.5rem 2rem;
+}
+
+.upload-button:hover,
+.convert-button:hover,
+.back-button:hover {
+    background: rgb(17, 124, 255);
+}
+
+.upload-button:active,
+.convert-button:active,
+.back-button:active{
+    background: rgb(9, 59, 119);
+}
+
+/* Preview Styles */
+
+.preview {
+    height: 20%;
+    border-radius: 0.3rem;
+}
+
+.image-canvas-container {
+    border: 1px solid black;
+}
+
+.convert-button,
+.back-button {
+  background:rgb(15 112 230);
+  color:#fff;
+  font-size: 1.5rem;
+  border-radius:2rem;
+  border: none;
+  cursor:pointer;
+  transition: background-color 0.15s;
+  
+  padding:0.5rem 2rem;
+}
+
+.preview-buttons-container {
+    display: flex;
+    gap: 1rem;
+}
