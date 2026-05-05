@@ -123,13 +123,17 @@ a:hover{
 
 .upload-button:hover,
 .convert-button:hover,
-.back-button:hover {
+.back-button:hover,
+.download-button:hover,
+.next-button:hover {
     background: rgb(17, 124, 255);
 }
 
 .upload-button:active,
 .convert-button:active,
-.back-button:active{
+.back-button:active
+.download-button:active,
+.next-button:active {
     background: rgb(9, 59, 119);
 }
 
@@ -145,7 +149,9 @@ a:hover{
 }
 
 .convert-button,
-.back-button {
+.back-button,
+.download-button,
+.next-button {
   background:rgb(15 112 230);
   color:#fff;
   font-size: 1.5rem;

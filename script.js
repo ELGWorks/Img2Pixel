@@ -29,11 +29,9 @@ function previewImage(objectURL) {
         <div class="preview-buttons-container">
             <button class="back-button">Back</button>
             <button class="convert-button">Convert</button>
-            <button class="download-button" disabled>Download</button>
         </div>
     `;
-
-    const downloadBtn = document.querySelector('.download-button');
+    
     const canvas = document.querySelector('.image-canvas-container');
     const ctx = canvas.getContext('2d');
 
@@ -42,21 +40,28 @@ function previewImage(objectURL) {
     let isPixelated = false;
 
     convertBtn.addEventListener('click', () => {
-    if (isPixelated) return;
+        let buttonsHTML = document.querySelector('.preview-buttons-container');
 
-    pixelate(canvas, ctx);
-    isPixelated = true;
+        buttonsHTML.innerHTML = `
+            <div class="preview-buttons-container">
+                <button class="download-button">Download</button>
+                <button class="next-button">Next</button>
+            </div>
+        `;
 
-    downloadBtn.disabled = false;
+        const downloadBtn = document.querySelector('.download-button');
+
+        downloadBtn.addEventListener('click', () => {
+            const link = document.createElement('a');
+            
+            link.download = `img2pixel_${Date.now()}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+
+        const nextBtn = document.querySelector('.next-button');
+        nextBtn.addEventListener('click', renderMain);
     });
-
-    downloadBtn.addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.download = `img2pixel_${Date.now()}.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    });
-
 
     let image = new Image();
     image.src = objectURL;
