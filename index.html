@@ -6,67 +6,139 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Img2Pixel</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <!-- Navigation Bar -->
+        <!-- Navigation Bars -->
         <nav>
-            <!-- <div class="top-left-container">
-                <div class="logo-container">
-                    <img src="image/ELGWorks-Logo.png" class="nav-logo">
-                </div>
-                <div class="brand-container">
-                    <p class="nav-brand">ELGWorks</p>
-                </div>
-            </div> -->
+            <!-- Desktop navigation bar -->
             <div class="top-middle-container">
                 <a href="#home">Home</a>
                 <a href="#demo">Demo</a>
                 <a href="#about">About</a>
-                <a href="#contact">Contact Us</a>
                 <a href="#privacy">Privacy Policy</a>
+                <!-- <a href="#contact">Contact Us</a> -->
+            </div>
+
+            <!-- Small screen navigation (burger) -->
+            <div class="mobile-navigation">
+                <div class="myLinks">
+                    <a href="#home">Home</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="burgerMenuButton()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
         </nav>
 
          <!-- Main Content/Page -->
         <main>
-            <!-- <section id="home" class="main-section">
-                <div class="main-container">
-                    <canvas class="image-canvas-container"></canvas>
-                    <div class="">
-                        <button class="convert-button">Back</button>
-                        <button class="convert-button">Convert</button>
-                    </div>
-                </div>
-            </section> -->
+
             <section id="home" class="main-section">
                 <div class="main-container">
                     <!-- Code is generated via JavaScript -->
                 </div>
             </section>
+
             <section id="demo" class="demo-section">
-                <div class="main-container">
-                    <p>Demos here</p>
+                <div class="demo-container">
+                    <div>
+                        <img class="demo-image" src="assets/demo/cat.jpg" alt="Cat">
+                        <p>Original</p>
+                    </div>
+                    <div>
+                        <img class="demo-image" src="assets/demo/img2pixel_1777963226078.png" alt="Pixelated cat">
+                        <p>Pixelated</p>
+                    </div>
                 </div>
             </section>
+
             <section id="about" class="about-section">
                 <div class="about-container">
-                    <p>A web based application developed by ELGWorks.</p>
+                    <div class="text-about-container">
+                        <p class="text-about">
+                            Img2Pixel, developed by ELGWorks, is a simple website-based application that turns uploaded images into pixelated-style image as an output. The app is intended to be minimalist and direct with the sole task of converting images. No login required. Processes happens inside the user's device so no data are being collected such as the user's uploaded images and processed images.
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section id="contact" class="contact-us-section">
+
+            <section id="privacy" class="privacy-policy-section">
+                <div class="privacy-policy-container">
+
+                    <h2>Privacy Policy</h2>
+                    <p><strong>Effective Date:</strong> May 5, 2026</p>
+
+                    <h2>1. Overview</h2>
+                    <p>
+                        Img2Pixel is a simple web-based tool that allows users to upload images
+                        and convert them into a pixelated style. The application runs entirely in
+                        the user’s browser using HTML, CSS, and vanilla JavaScript.
+                    </p>
+
+                    <h2>2. Data Collection</h2>
+                    <p>
+                        Img2Pixel does <strong>not collect, store, or transmit any personal data</strong>.
+                    </p>
+                    <ul>
+                        <li>No user accounts or logins are required</li>
+                        <li>No images are stored on any server</li>
+                        <li>No personal files or data are saved or shared</li>
+                    </ul>
+
+                    <h2>3. Image Processing</h2>
+                    <p>
+                        All image processing happens locally in your browser. Uploaded images are
+                        temporarily loaded into memory for conversion and are never sent to any server.
+                        Once the page is refreshed or closed, the data is automatically cleared.
+                    </p>
+
+                    <h2>4. Cookies and Tracking</h2>
+                    <p>
+                        This website does not use cookies, analytics tools, or tracking scripts.
+                    </p>
+
+                    <h2>5. Third-Party Services</h2>
+                    <p>
+                        This website may use third-party services such as Google Fonts to improve
+                        visual appearance. These services may collect basic technical information
+                        (such as browser type or IP address) according to their own privacy policies.
+                    </p>
+
+                    <h2>6. Data Security</h2>
+                    <p>
+                        Since all processing is done locally on your device, Img2Pixel does not
+                        store or transmit any user data. However, users are advised not to upload
+                        sensitive or private images to any online tool.
+                    </p>
+
+                    <h2>7. Changes to This Policy</h2>
+                    <p>
+                        This Privacy Policy may be updated from time to time. Any changes will be
+                        posted on this page.
+                    </p>
+
+                    <h2>8. Contact</h2>
+                    <p>
+                        For any questions, contact: <strong>elgworks.ph@gmail.com</strong>
+                    </p>
+
+                </div>
+            </section>
+
+            <!-- <section id="contact" class="contact-us-section">
                 <div class="contact-us-container">
                     <p>Contact us @elgworks.ph@gmail.com</p>
                 </div>
-            </section>
-            <section id="privacy" class="privacy-policy-section">
-                <div class="privacy-policy-container">
-                    <p>Privacy Policy</p>
-                </div>
-            </section>
+            </section> -->
+
         </main>
 
         <script src="script.js"></script>

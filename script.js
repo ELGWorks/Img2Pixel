@@ -2,7 +2,7 @@ function renderMain() {
     let html = document.querySelector('.main-container');
 
     html.innerHTML = `
-        <p class="slogan">See yourself in the world of pixels!</p>
+        <h1 class="slogan">See yourself in the world of pixels!</h1>
         <p class="quick-how-to">Upload an image to convert it into a pixelated-style image.</p>
         <input type="file" id="upload" accept="image/png, image/jpeg, image/jpg" hidden>
         <label for="upload" class="upload-button">Upload Image</label>
@@ -127,5 +127,27 @@ function pixelate(canvas, ctx) {
     );
 }
 
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+} 
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu*/
+function burgerMenuButton() {
+    const menu = document.querySelector(".myLinks");
+    menu.classList.toggle("show");
+}
+
+// Close menu when a nav link is clicked
+document.querySelectorAll(".myLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+        const menu = document.querySelector(".myLinks");
+        menu.classList.remove("show");
+    });
+});
 
 renderMain()

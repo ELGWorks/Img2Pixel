@@ -23,27 +23,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
-    margin-top: rem;
-}
-
-/* Nav Left Middle Container Styles */
-.top-left-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 0.5rem;
-}
-
-.nav-logo{
-    height: 5rem;
-}
-
-.nav-brand {
-    font-family: Orbitron;
-    font-size: 2rem;
-    color: rgb(0, 0, 0);
-    display: inline;
+    overflow: visible;
 }
 
 /* Nav Middle Container Styles */
@@ -78,20 +58,42 @@ a:hover{
     align-items: center;
 }
 
+.demo-section {
+    height: calc(110dvh - 4rem);
+}
+
 .main-section {
-    height: calc(105dvh - 4rem);
+    height: calc(110dvh - 4rem);
     scroll-margin-top: 4rem;
+}
+
+.privacy-policy-section {
+    min-height: calc(125dvh - 4rem);
 }
 
 .main-container,
 .about-container,
-.contact-container,
-.privacy-policy-container {
+.contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.privacy-policy-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+}
+
+.demo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
 .main-container {
@@ -131,7 +133,7 @@ a:hover{
 
 .upload-button:active,
 .convert-button:active,
-.back-button:active
+.back-button:active,
 .download-button:active,
 .next-button:active {
     background: rgb(9, 59, 119);
@@ -166,4 +168,157 @@ a:hover{
 .preview-buttons-container {
     display: flex;
     gap: 1rem;
+}
+
+.text-about {
+    text-align: justify;
+}
+
+.text-about-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.demo-image {
+    width: 500px; 
+    height: 600px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.mobile-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.myLinks {
+  display: none;
+}
+
+.mobile-navigation a.icon {
+  background: transparent;
+  font-size: 2.3rem;
+  color: rgb(84 97 108);
+}
+
+.myLinks.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;        /* change absolute → fixed */
+    top: 3rem;              /* sits just below the nav bar height on mobile */
+    left: 0;                /* anchors to the viewport edge */
+    width: 100%;            /* now 100% means full viewport width */
+    background-color: #e0e0e0;
+    line-height: 100px;
+    z-index: 1000;
+}
+
+.myLinks.show a {
+    white-space: nowrap;
+}
+
+/* Desktop view */
+@media (min-width: 641px) {
+    .mobile-navigation{
+        display: none;
+    }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        justify-content: flex-start;
+    }
+
+    .top-middle-container{
+        display: none;
+    }
+
+    .mobile-navigation{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-right: 1.5rem;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    .text-about-container {
+        width: 90vw;
+    }
+
+    .text-about {
+        word-wrap: break-word;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .demo-image {
+        width: 40vw;
+        height: 53vw;
+        object-fit: contain;
+    }
+
+    .main-section,
+    .demo-section {
+        height: 100dvh;
+        margin-bottom: 0;
+        padding-top: 3rem;
+        box-sizing: border-box;
+    }
+
+    .about-section,
+    .privacy-policy-section {
+        height: auto;
+        min-height: 100dvh;
+        padding: 3rem 1.5rem;
+        box-sizing: border-box;
+        margin-bottom: 0;
+    }
+
+    .about-section {
+        padding: 3rem 1.5rem;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    nav {
+        height: 3rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+    .slogan {
+        font-size: 2rem;
+        padding: 0 .7rem;
+    }
+
+    .quick-how-to {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
 }
