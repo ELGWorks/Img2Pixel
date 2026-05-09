@@ -271,6 +271,14 @@ p {
     }
 }
 
+@media (max-width: 1080px) {
+    .demo-image {
+        height: auto;
+        width: 45vw;
+    }
+}
+
+
 /* Small screens */
 @media (max-width: 640px) {
 
@@ -360,6 +368,6 @@ p {
     }
 
     canvas {
-        height: 100vw;
+        height: 100vh;
     }
 }
