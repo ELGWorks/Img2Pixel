@@ -358,4 +358,8 @@ p {
         font-size: 0.9rem;
         padding: 0 1rem;
     }
+
+    canvas {
+        height: 100vw;
+    }
 }

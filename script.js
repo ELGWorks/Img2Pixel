@@ -122,7 +122,7 @@ function previewImage(objectURL) {
 }
 
 function pixelate(canvas, ctx) {
-    const pixelSize = 10;
+    const pixelSize = 16;
 
     const width = canvas.width;
     const height = canvas.height;

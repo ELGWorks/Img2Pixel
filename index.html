@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Img2Pixel converts uploaded images into pixelated-style images directly in your browser.">
+        <meta name="theme-color" content="#0F70E6">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta property="og:title" content="Img2Pixel">
+        <meta property="og:description" content="Convert images into pixelated style in your browser.">
+        <meta property="og:type" content="website">
+
         <title>Img2Pixel</title>
+
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/icon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/icon/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+        <!-- <link rel="canonical" href="https://yourdomain.com/"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +46,7 @@
                     <a href="#about">About</a>
                     <a href="#privacy">Privacy Policy</a>
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="burgerMenuButton()">
+                <a href="javascript:void(0);" class="icon" onclick="burgerMenuButton()" aria-label="Open menu">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -50,11 +64,11 @@
             <section id="demo" class="demo-section">
                 <div class="demo-container">
                     <div>
-                        <img class="demo-image" src="assets/demo/cat.jpg" alt="Cat">
+                        <img class="demo-image" src="assets/demo/cat.jpg" alt="Cat" loading="lazy">
                         <p>Original</p>
                     </div>
                     <div>
-                        <img class="demo-image" src="assets/demo/img2pixel_1777963226078.png" alt="Pixelated cat">
+                        <img class="demo-image" src="assets/demo/img2pixel_1777963226078.png" alt="Pixelated cat" loading="lazy">
                         <p>Pixelated</p>
                     </div>
                 </div>
