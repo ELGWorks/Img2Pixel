@@ -25,7 +25,14 @@ function previewImage(objectURL) {
     let html = document.querySelector('.main-container');
 
     html.innerHTML = `
+
+        <div class="loader-overlay hidden">
+        <div class="loader"></div>
+            <p>Converting image...</p>
+        </div>
+
         <canvas class="image-canvas-container"></canvas>
+        
         <div class="preview-buttons-container">
             <button class="back-button">Back</button>
             <button class="convert-button">Convert</button>
@@ -40,6 +47,17 @@ function previewImage(objectURL) {
     let isPixelated = false;
 
     convertBtn.addEventListener('click', () => {
+        const loader = document.querySelector('.loader-overlay');
+
+        loader.classList.remove('hidden');
+
+        // Allow browser to render loader first
+        setTimeout(() => {
+
+        pixelate(canvas, ctx);
+
+        loader.classList.add('hidden');
+
         let buttonsHTML = document.querySelector('.preview-buttons-container');
 
         buttonsHTML.innerHTML = `
@@ -61,6 +79,7 @@ function previewImage(objectURL) {
 
         const nextBtn = document.querySelector('.next-button');
         nextBtn.addEventListener('click', renderMain);
+    }, 100);
     });
 
     let image = new Image();
