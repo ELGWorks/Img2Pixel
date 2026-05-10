@@ -15,7 +15,7 @@
 ## 📱 Responsive Demo
 
 <p align="center">
-  <img src="assets/demo/images/mobile-view.png" width="800"/>
+  <img src="assets/demo/images/mobile-view.png" width="200"/>
 </p>
 <p>Works on mobile phones!</p>
 ---
