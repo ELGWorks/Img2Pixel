@@ -18,6 +18,7 @@
   <img src="assets/demo/images/mobile-view.png" width="200"/>
 </p>
 <p>Works on mobile phones!</p>
+
 ---
 
 ## 🚀 Live Demo
