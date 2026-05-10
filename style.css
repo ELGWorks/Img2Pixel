@@ -368,6 +368,7 @@ p {
     }
 
     canvas {
-        height: 100vh;
+        max-width: 90%;
+        height: auto;
     }
 }

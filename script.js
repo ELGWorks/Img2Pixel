@@ -35,7 +35,7 @@ function previewImage(objectURL) {
         
         <div class="preview-buttons-container">
             <button class="back-button">Back</button>
-            <button class="convert-button">Convert</button>
+            <button class="convert-button" aria-label="Convert Image">Convert</button>
         </div>
     `;
     
@@ -44,7 +44,6 @@ function previewImage(objectURL) {
 
     const backBtn = document.querySelector('.back-button');
     const convertBtn = document.querySelector('.convert-button');
-    let isPixelated = false;
 
     convertBtn.addEventListener('click', () => {
         const loader = document.querySelector('.loader-overlay');
@@ -114,15 +113,10 @@ function previewImage(objectURL) {
 
     // Back button
     backBtn.addEventListener('click', renderMain);
-
-    // Convert button (PIXELATION HERE)
-    convertBtn.addEventListener('click', () => {
-        pixelate(canvas, ctx, image);
-    });
 }
 
 function pixelate(canvas, ctx) {
-    const pixelSize = 16;
+    const pixelSize = Math.max(8, Math.floor(canvas.width / 40));
 
     const width = canvas.width;
     const height = canvas.height;
@@ -145,15 +139,6 @@ function pixelate(canvas, ctx) {
         0, 0, width, height
     );
 }
-
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-} 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu*/
 function burgerMenuButton() {
