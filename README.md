@@ -24,7 +24,7 @@
 ## 🚀 Live Demo
 
 <p>
-  <a href="https://elgworks.github.io/Img2Pixel/">
+  <a href="https://elgworks.github.io/Img2Pixel/" target="_blank">
     Try the app
   </a>
 </p>
