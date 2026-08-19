@@ -64,8 +64,13 @@ function previewImage(objectURL) {
 
         buttonsHTML.innerHTML = `
             <div class="preview-buttons-container">
+<<<<<<< HEAD
                 <button class="next-button">Convert more</button>
                 <button class="download-button">Download</button>
+=======
+                <button class="download-button">Download</button>
+                <button class="next-button">Next</button>
+>>>>>>> 5deac93f4c49d277db216d9d4db593f7bceb4748
             </div>
         `;
 
