@@ -1,0 +1,419 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins;
+    line-height: 1.5;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    overflow: visible;
+    z-index: 1000;
+}
+
+/* Nav Middle Container Styles */
+.top-middle-container {
+    display: flex;
+    gap: 5rem;
+}
+
+.top-middle-container a {
+    transform: scaleX(0.85);
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(84 97 108);
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.5s ease;
+}
+
+a:hover{
+    border-bottom-color: rgb(84 97 108);
+}
+
+/* Main Content Styles */
+
+.main-section,
+.demo-section,
+.about-section,
+.contact-us-section,
+.privacy-policy-section {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-section {
+    height: calc(110dvh - 4rem);
+}
+
+.main-section {
+    height: calc(110dvh - 4rem);
+    scroll-margin-top: 4rem;
+}
+
+.privacy-policy-section {
+    min-height: calc(125dvh - 4rem);
+}
+
+.main-container,
+.about-container,
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.privacy-policy-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+}
+
+.demo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.main-container {
+    gap: 1rem;
+}
+
+.slogan {
+    transform: scaleX(0.85);
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(69 69 69);
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.quick-how-to{
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(84 97 108);
+    font-size: 0.7rem;
+    transform: scaleX(0.85);
+}
+
+.supported-format {
+    font-family: "Press Start 2P", system-ui;
+    color: rgb(84 97 108);
+    font-size: 0.45rem;
+    transform: scaleX(0.85);
+}
+
+.upload-button{
+  background:rgb(15 112 230);
+  transform: scaleX(0.85);
+  color:#fff;
+  font-size: 1.2rem;
+  border-radius:2rem;
+  cursor:pointer;
+  transition: background-color 0.15s;  
+  font-family: "Press Start 2P", system-ui;
+  padding: 0.7rem 1.5rem;
+}
+
+.upload-button:hover,
+.convert-button:hover,
+.back-button:hover,
+.download-button:hover,
+.next-button:hover {
+    background: rgb(17, 124, 255);
+}
+
+.upload-button:active,
+.convert-button:active,
+.back-button:active,
+.download-button:active,
+.next-button:active {
+    background: rgb(9, 59, 119);
+}
+
+/* Preview Styles */
+
+.preview {
+    height: 20%;
+    border-radius: 0.3rem;
+}
+
+.image-canvas-container {
+    border: 1px solid black;
+}
+
+.convert-button,
+.back-button,
+.download-button,
+.next-button {
+  background:rgb(15 112 230);
+  color:#fff;
+  font-size: 1.5rem;
+  border-radius:2rem;
+  border: none;
+  cursor:pointer;
+  transition: background-color 0.15s;
+  
+  padding:0.5rem 2rem;
+}
+
+.preview-buttons-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.text-about {
+    text-align: justify;
+}
+
+.text-about-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.demo-image {
+    width: 500px; 
+    height: 600px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.demo-text {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 0.8rem;
+    margin: 0;
+    transform: scaleX(0.85);
+}
+
+.mobile-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.myLinks {
+  display: none;
+}
+
+.mobile-navigation a.icon {
+  background: transparent;
+  font-size: 2.3rem;
+  color: rgb(84 97 108);
+}
+
+.myLinks.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;        /* change absolute → fixed */
+    top: 3rem;              /* sits just below the nav bar height on mobile */
+    left: 0;                /* anchors to the viewport edge */
+    width: 100%;            /* now 100% means full viewport width */
+    background-color: #e0e0e0;
+    line-height: 100px;
+    z-index: 1000;
+}
+
+.myLinks.show a {
+    white-space: nowrap;
+}
+
+.loader-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid rgb(15 112 230);
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Desktop view */
+@media (min-width: 641px) {
+    .mobile-navigation{
+        display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .demo-image {
+        height: auto;
+        width: 45vw;
+    }
+}
+
+
+/* Small screens */
+@media (max-width: 640px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        justify-content: flex-start;
+    }
+
+    .top-middle-container{
+        display: none;
+    }
+
+    .mobile-navigation{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-right: 1.5rem;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    .text-about-container {
+        width: 90vw;
+    }
+
+    .text-about {
+        word-wrap: break-word;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .demo-image {
+        width: 40vw;
+        height: 53vw;
+        object-fit: contain;
+    }
+
+    .main-section,
+    .demo-section {
+        height: 100dvh;
+        margin-bottom: 0;
+        padding-top: 3rem;
+        box-sizing: border-box;
+    }
+
+    .about-section,
+    .privacy-policy-section {
+        height: auto;
+        min-height: 100dvh;
+        padding: 3rem 1.5rem;
+        box-sizing: border-box;
+        margin-bottom: 0;
+    }
+
+    section {
+        margin-bottom: 0;
+    }
+
+    nav {
+        height: 3rem;
+    }
+
+    a {
+        font-family: "Press Start 2P", system-ui;
+        color: rgb(84 97 108);
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    canvas {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        transform: scaleX(0.85) scaleY(1.5);
+        margin-bottom: 1rem;
+    }
+
+    .quick-how-to {
+        font-size: 0.6rem;
+        line-height: 1rem;
+        transform: scaleX(0.75) scaleY(1.2);
+        margin-bottom: 0.7rem;
+    }
+    
+    .supported-format {
+        font-family: "Press Start 2P", system-ui;
+        color: rgb(84 97 108);
+        font-size: 0.4rem;
+        transform: scaleX(0.85) scaleY(1.2);
+    }
+
+    .upload-button {
+        font-size: 1rem;
+        padding: 0.6rem 2rem;
+        transform: scaleX(0.85) scaleY(1.1);
+    }
+
+    .demo-text {
+        font-size: 0.6rem;
+    }
+
+    .download-button,
+    .next-button {
+    font-size: 1.2rem;
+}
