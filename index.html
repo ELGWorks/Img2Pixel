@@ -114,7 +114,7 @@
 
                     <h2>4. Cookies and Tracking</h2>
                     <p>
-                        This website does not use cookies, analytics tools, or tracking scripts.
+                        This website uses Vercel Web Analytics to understand general website usage, such as page visits. Img2Pixel does not use this information to identify individual users, and uploaded images are not collected or transmitted.
                     </p>
 
                     <h2>5. Third-Party Services</h2>
@@ -154,5 +154,14 @@
         </main>
 
         <script src="script.js"></script>
+
+        <!-- Vercel Analytics -->
+        <script>
+            window.si = window.si || function () {
+                (window.siq = window.siq || []).push(arguments);
+            };
+        </script>
+        <script defer src="/_vercel/insights/script.js"></script>
+
     </body>
 </html>
